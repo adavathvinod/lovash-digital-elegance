@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -66,17 +67,11 @@ const Navbar = () => {
         <nav className="container-wide mx-auto px-4 py-4 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-display text-xl font-bold">
-              IK
-            </div>
-            <div className="hidden sm:block">
-              <h1 className="font-display text-xl font-semibold text-foreground leading-tight">
-                Indian Kitchen
-              </h1>
-              <p className="text-xs text-muted-foreground tracking-widest uppercase">
-                Lovash BYOB
-              </p>
-            </div>
+            <img 
+              src={logo} 
+              alt="Indian Kitchen Lovash BYOB" 
+              className="h-14 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
